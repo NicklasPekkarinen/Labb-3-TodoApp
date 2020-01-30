@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GZv-qy-c6U">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Todo View Controller-->
+        <scene sceneID="uLa-W6-MZz">
+            <objects>
+                <viewController id="GZv-qy-c6U" customClass="NewTodoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1U-5B-NaK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-Oh-aXR">
+                                <rect key="frame" x="16" y="431" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiW-6c-oWn">
+                                <rect key="frame" x="184" y="473" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="saveTask:" destination="GZv-qy-c6U" eventType="touchUpInside" id="aBk-aY-woL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE A NEW TASK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DpB-HS-F65">
+                                <rect key="frame" x="62.333333333333343" y="289" width="289.33333333333326" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zbT-Oh-aXR" firstAttribute="centerY" secondItem="e1U-5B-NaK" secondAttribute="centerY" id="3dz-kO-5de"/>
+                            <constraint firstItem="zbT-Oh-aXR" firstAttribute="top" secondItem="DpB-HS-F65" secondAttribute="bottom" constant="100" id="4bx-YQ-1wp"/>
+                            <constraint firstItem="zbT-Oh-aXR" firstAttribute="leading" secondItem="M6f-Fi-XG2" secondAttribute="leading" constant="16" id="II9-dS-6fd"/>
+                            <constraint firstItem="DpB-HS-F65" firstAttribute="centerX" secondItem="e1U-5B-NaK" secondAttribute="centerX" id="fGV-ee-cMb"/>
+                            <constraint firstItem="M6f-Fi-XG2" firstAttribute="trailing" secondItem="zbT-Oh-aXR" secondAttribute="trailing" constant="16" id="hZS-Tn-Msk"/>
+                            <constraint firstItem="ZiW-6c-oWn" firstAttribute="top" secondItem="zbT-Oh-aXR" secondAttribute="bottom" constant="8" id="ksY-DC-ePU"/>
+                            <constraint firstItem="ZiW-6c-oWn" firstAttribute="centerX" secondItem="zbT-Oh-aXR" secondAttribute="centerX" id="uWj-uC-OAP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M6f-Fi-XG2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o6r-xF-JfR"/>
+                    <connections>
+                        <outlet property="userTaskField" destination="zbT-Oh-aXR" id="ueU-cA-wkd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8W-YP-dCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2123.1884057971015" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
